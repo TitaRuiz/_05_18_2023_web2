@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Alumnos</title>
 </head>
 <body>
-$END$
+<h1>Alumnos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Alumno id</th>
+        <th>Nombre</th>
+        <th>Nota final</th>
+        <th>Creditos</th>
+        <th>Editar</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="a: ${alumnos}" >
+            <td>[[${a.idAlumno}]]</td>
+            <td>[[${a.nombre}]]</td>
+            <td>[[${a.nota}]]</td>
+            <td>[[${a.creditos}]]</td>
+            <td>
+                <a th:href="@{'/alumnos/editar/' + ${a.idAlumno}}">Editar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a th:href="@{'/'}">Regresar a la pagina inicial</a>
 </body>
 </html>
