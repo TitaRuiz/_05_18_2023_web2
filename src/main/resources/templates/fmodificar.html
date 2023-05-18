@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Formulario Alumnos</h1>
-<form th:action="@{'/alumnos/nuevo'}" method="post" th:object="${alumno}">
+<form th:action="@{'/alumnos/modificar'}" method="post" th:object="${alumno}">
     <label for="idAlumno">Alumno</label>
     <input type="number" id="idAlumno" th:field="*{idAlumno}" required/>
     <br/>
@@ -19,7 +19,7 @@
     <label for="creditos">Creditos estudiados: </label>
     <input type="number" id="creditos" th:field="*{creditos}" />
     <br/>
-    <input type="submit" value="Dar de alta">
+    <input type="submit" value="Modificar">
 
 
 </form>
